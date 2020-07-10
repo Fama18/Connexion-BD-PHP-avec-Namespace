@@ -1,9 +1,9 @@
 <?php
-
+namespace Model;
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-class Compte {
+class Class_Compte {
     private $numagence;
     private $cleRib;
     private $NumCompte;

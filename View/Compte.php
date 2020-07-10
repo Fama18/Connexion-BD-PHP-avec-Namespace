@@ -44,6 +44,7 @@ require_once '../Model/principal.php';
                         <legend id="legend3">Informations Compte</legend>
                         <label for="typeCompte">Selectionner un type de compte* : </label>
                         <?php
+                        //use Model\;
                         require_once '../Model/TypeCompte.php';
                         ?>
                         <span id="ErrorTypeCompte"></span><br />
@@ -64,20 +65,10 @@ require_once '../Model/principal.php';
                             <input type="text" id="NumCompte" name="NumCompte" value="" placeholder="Numero de Compte" />
                             <span id="ErrorNumCompte"></span>
                             <label for="infoclient">Info client* : </label>
-                            <select type="text" id="infoclien" name="id_client" value="">
-                            <option value="S">--Sélectionner le client --</option>
                             <?php
-                            $prin = new Principal();
-                            $pdo = $prin->Connect();
-                            $typeC = $pdo->prepare('SELECT * FROM client_physique');
-                            $typeC->execute();
-                            while($result = $typeC->fetch(PDO::FETCH_ASSOC)) {;
+                                //use Model\;
+                                require_once '../Model/infoClient.php';
                             ?>
-                            <option value="<?= $result['id_client_physique']?>"><?= $result['numCni']?></option>
-                           <?php
-                           }
-                           ?>
-                            </select>
                             <span id="ErrorClient"></span>
                             <label for="DateEcheance" id="labEch">Date d'écheance* : </label>
                             <input type="date" id="DateEcheance" name="DateEcheance" value="" placeholder="Date d'écheance" />

@@ -1,13 +1,9 @@
 <?php
 namespace Model;
-//namespace connecting;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-//require_once '../Config/autoload.php';
-
-//use configuration\config;
 use PDO;
 use PDOException;
 

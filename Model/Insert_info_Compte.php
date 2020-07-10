@@ -1,17 +1,14 @@
 <?php
-
+namespace Model;
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-require_once 'principal.php';
-require_once 'Config.php';
-require_once 'Class_Compte.php';
 
-class principal_compte extends Principal{
+class Insert_info_Compte extends Principal{
 
 
- public function Ajout_compte(Compte $Compte){
-        $req = self::Insert("INSERT INTO compte(numagence, cleRib, NumCompte) VALUES (?, ?, ?)",
+ public function Ajout_compte(Class_Compte $Compte){
+        $req = self::Insert("INSERT INTO comptes(numagence, cleRib, NumCompte) VALUES (?,?,?)",
        array(
         $Compte->getnumagence(),
         $Compte->getCleRib(),
@@ -29,7 +26,7 @@ class principal_compte extends Principal{
 
     //function de liste de tabeau des clients physiques
     public function List_Compte(){
-    $req = self::list("SELECT * FROM compte");
+    $req = self::list("SELECT * FROM comptes");
     return $req;
      }
     }

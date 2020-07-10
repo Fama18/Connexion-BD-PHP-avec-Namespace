@@ -1,6 +1,8 @@
-
-                           <?php
-        require_once 'principal.php';
+<?php
+//namespace Model;
+            require_once '../Config/autoload.php';
+            use Model\Principal;
+            //require_once 'principal.php';
             $prin = new Principal();
             $pdo = $prin->Connect();
             $typeC = $pdo->prepare('SELECT * FROM typecompte');

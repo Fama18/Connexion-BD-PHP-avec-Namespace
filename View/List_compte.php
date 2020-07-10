@@ -43,7 +43,7 @@
                             // Définir le mode d'erreur PDO comme l'exception
                             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                            $sql = "SELECT * FROM compte";
+                            $sql = "SELECT * FROM comptes";
                             $result = $db->query($sql);
 
                             if($result->rowCount() > 0) {

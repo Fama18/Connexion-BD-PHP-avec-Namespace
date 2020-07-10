@@ -5,7 +5,6 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 
-
 class Insert_Client_Moral extends Principal {
 
     public function Ajout_client_Moral(Class_Client_Moral $client_moral){
