@@ -8,16 +8,18 @@ class Insert_info_Compte extends Principal{
 
 
  public function Ajout_compte(Class_Compte $Compte){
-        $req = self::Insert("INSERT INTO comptes(numagence, cleRib, NumCompte) VALUES (?,?,?)",
+        $req = self::Insert("INSERT INTO comptes(numagence, cleRib, NumCompte,id_client_physique,id_Compte) VALUES (?,?,?,?,?)",
        array(
-        $Compte->getnumagence(),
+        $Compte->getNumAgence(),
         $Compte->getCleRib(),
-        $Compte->getNumCompte()
+        $Compte->getNumCompte(),
+        $Compte->getIdclientphysique(),
+        $Compte->getIdCompte()
 
         ));
 
         if($req){
-            echo "<div class='alert alert-success'>Informatioons compte enregistré avec succés </div>";
+            echo "<div class='alert alert-success'>Informations compte enregistré avec succés </div>";
         }else{
             echo "<div class='alert alert-danger'>Echec d'enregistrement du compte</div>";
         }

@@ -14,11 +14,15 @@ $p = new Insert_info_Compte();
 
 if(isset($_POST['btn'])) {
 
-   $compte = new Class_Compte(array(
-       'numagence'=>trim($_POST['numagence']),
-       'cleRib'=>trim($_POST['cleRib'], ' '),
-       'NumCompte'=>trim($_POST['NumCompte'], ' ')
-   ));
+    //var_dump($_POST['numagence']);
+    //die();
+   $compte = new Class_Compte();
+
+   $compte->setNumAgence($_POST['numagence']);
+   $compte->setCleRib($_POST['cleRib']);
+   $compte->setNumCompte($_POST['NumCompte']);
+   $compte->setIdclientphysique($_POST['id_client_physique']);
+   $compte->setIdCompte($_POST['id_Compte']);
 
       $p->Ajout_compte($compte);
 

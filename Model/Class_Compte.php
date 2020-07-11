@@ -7,6 +7,8 @@ class Class_Compte {
     private $numagence;
     private $cleRib;
     private $NumCompte;
+    private $idclientphysique;
+    private $idCompte;
 
     public function ___construct(array $data) {
         $this->hydrate($data);
@@ -22,7 +24,7 @@ class Class_Compte {
      }
 
      //getteurs
-    public function getnumagence() {
+    public function getNumAgence() {
         return $this->numagence;
     }
     public function getCleRib() {
@@ -30,6 +32,12 @@ class Class_Compte {
     }
     public function getNumCompte() {
         return $this->NumCompte;
+    }
+    public function getIdclientphysique() {
+        return $this->idclientphysique;
+    }
+    public function getIdCompte() {
+        return $this->idCompte;
     }
 
     //setteurs
@@ -41,5 +49,11 @@ class Class_Compte {
     }
     public function setNumCompte($NumCompte) {
         $this->NumCompte = $NumCompte;
+    }
+    public function setIdclientphysique($idclientphysique) {
+        $this->idclientphysique = $idclientphysique;
+    }
+    public function setIdCompte($idCompte) {
+        $this->idCompte = $idCompte;
     }
 }

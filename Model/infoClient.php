@@ -11,7 +11,7 @@
                             <?php
                             while($result = $typeC->fetch(PDO::FETCH_ASSOC)) {;
                             ?>
-                            <option value="<?= $result['id_client_physique']?>"><?= $result['numCni']?></option>
+                            <option value="<?php echo $result['id_client_physique']?>"><?php echo $result['numCni']?></option>
                            <?php
                            }
                            ?>
